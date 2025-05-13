@@ -1,0 +1,61 @@
+{
+  "name": "filmscandata",
+  "version": "1.1.5",
+  "description": "Simple app to document film scans",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "build --dir",
+    "dist": "electron-builder"
+  },
+  "author": "Jason Ritchie <jason.ritchie06@gmail.com>",
+  "homepage": "http://thenegativeprint.com/",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^5.0.8",
+    "electron-builder": "^21.1.5"
+  },
+  "build": {
+    "appId": "com.electron.filmscandata",
+    "compression": "normal",
+    "asar": true,
+    "extends": null,
+    "files": [
+      "main.js",
+      "instructions.js",
+      "about.js",
+      "index.js",
+      "inventory.js",
+      "renderer.js",
+      "build/**/*",
+      "node_modules/**/*",
+      "icon.png",
+      "about_image.png",
+      "index2.html",
+      "instructions.html",
+      "inventory.html",
+      "about.html",
+      "renderer.js",
+      "style.css",
+      "icon.icns",
+      "icon.ico"
+    ],
+    "linux": {
+      "target": "appimage",
+       "icon": "icon.png"
+    },
+    "win": {
+      "target": "portable",
+      "icon": "icon.ico"
+    },
+    "mac": {
+      "target": "tar.gz",
+      "category": "public.app-category.utilities",
+      "icon": "icon.icns"
+    }
+  },
+  "dependencies": {
+    "electron-packager": "^14.0.3",
+    "jimp": "^0.6.4"
+  }
+}

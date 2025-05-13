@@ -1,0 +1,87 @@
+<!DOCTYPE html> 
+<html> 
+   <head> 
+      <meta charset = "UTF-8"> 
+      <title>File Scan Data - Inventory</title> 
+      <link rel="stylesheet" type="text/css" href="style.css">
+   </head> 
+   
+    <body> 
+            <form id = "myForm2">
+                    <div class="row">
+                        <div class="column" style="width:275px">
+                            Cameras:<br>
+                            <input type="text" id="camera" size="22" title="Type in a new camera and hit enter to add..."/>
+                             <ul id="cameras" class="sub-menu" style="width:250px;height: 300px;" title="Double-click to remove a camera..."></ul>
+                        </div>
+                        <div class="column" style="width:325px" >
+                                Lenses:<br>
+                            <input type="text" id="lens" size="28" title="Type in a new lens and hit enter to add..."/>
+                            <ul id="lenses" class="sub-menu" style="width:302px;height: 300px;" title="Double-click to remove a lens..."></ul>
+                        </div>
+                        <div class="column" style="width:250px">
+                                Films:<br>
+                                <input type="text" id="film" size="23" title="Type in a new film and hit enter to add..."/>
+                                <ul id="films" class="sub-menu" style="width:260px;height: 300px;" title="Double-click to remove a film..." ></ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column" style="width:125px">
+                            ISOs:<br>
+                            <input type="text" id="iso" size="6" title="Type in a new ISO and hit enter to add..."/>
+                            <ul id="ISOs" class="sub-menu-mini" style="width:100px;height: 150px;" title="Double-click to remove a ISO..."></ul>
+                        </div>
+                        <div class="column" style="width:245px" >
+                                Developers:<br>
+                            <input type="text" id="developer" size="19" title="Type in a new developer and hit enter to add..."/>
+                            <ul id="developers" class="sub-menu-mini" style="width:225px;height: 150px;" title="Double-click to remove a developer..."></ul>
+                        </div>
+                        <div class="column" style="width:250px">
+                                Photographers:<br>
+                                <input type="text" id="photographer" size="20" title="Type in a new photographer and hit enter to add..."/>
+                                <ul id="photographers" class="sub-menu-mini" style="width:230px;height: 150px;" title="Double-click to remove a photographer..."></ul>
+                        </div>
+                        <div class="column" style="width:120px">
+                                Film Formats:<br>
+                                <input type="text" id="format" size="6" title="Type in a new format and hit enter to add..."/>
+                                <ul id="formats" class="sub-menu-mini" style="width:100px;height: 150px;" title="Double-click to remove a format..."></ul>
+                        </div>
+                        <div class="column" style="width:120px">
+                                Binders:<br>
+                                <input type="text" id="binder" size="7" title="Type in a new binder and hit enter to add..."/>
+                                <ul id="binders" class="sub-menu-mini" style="width:110px;height: 150px;" title="Double-click to remove a binder..."></ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column" style="width:120px">
+                            Last Sheet#: <input type="text" id="lastSheet" size="6" title="Adjust the last sheet number used..."/>
+                        </div>
+                        <div class="column" style="width:300px">
+                            Create Thumnails: <input type="checkbox" id="create_thumbs" title="Create thumnail images from jpeg scans?"><br>
+                            <input type="text" id="lastDir" hidden/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column" style="width:325px;">
+                                
+
+                        </div>
+                        <div class="column" style="width:325px;">
+                        
+                        </div>
+                        <div class="column" style="width:205px;">
+                                <button type="button" name="saveForm" id="saveForm" class="btn" title="Save to presets file...">Save Presets</button>
+                               
+                        </div>
+                        <div class="column" style="width:25px;">
+                                <button type="button" name="closeForm" id="closeForm" class="btn" title="Closes the application...">Close</button>
+                        </div>
+                    </div>
+                        
+                    
+                    
+    <script src="./inventory.js"></script>
+
+    </body>
+    
+</html>

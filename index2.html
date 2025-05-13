@@ -1,0 +1,133 @@
+<!DOCTYPE html> 
+<html> 
+   <head> 
+      <meta charset = "UTF-8"> 
+      <title>File Scan Data - Main</title> 
+      <link rel="stylesheet" type="text/css" href="style.css">
+   </head> 
+   
+    <body> 
+            <button id="openFile" name="openFile" class="btn" title="Open the folder containing the negative scans...">Open Location</button>
+            <input type="text" id="location" name="location" size="80"></input><br><br>
+            <form id = "myForm">
+                <div class="row">
+                    <div class="column">
+                        Camera: <br>
+                        <input type="text" list="cameras" id="camera" size="25" title="Click to choose what camera was used..."/>
+                        <datalist id="cameras">
+                        </datalist>
+                    </div>
+                    <div class="column">
+                            Film: <br>
+                            <input type="text" id="film" list="films" size="25" title="Click to choose what film was used...">
+                            <datalist id="films">
+                            </datalist>
+                    </div>
+                    <div class="column">
+                            ISO Used: <br>
+                            <input type="text" id="ISO" list="ISOs">
+                            <datalist id="ISOs">
+                            </datalist>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                            Add lens to lenses used <br>
+                            <input type="text" list="lenses" id="lens" size="25" title="Click to choose each lens that was used..."/><br>
+                            <datalist id="lenses">
+                            </datalist>
+                    </div>
+                    <div class="column">
+                            Developer:<br>
+                            <input type="text" id="developer" list="developers">
+                            <datalist id="developers">
+                            </datalist>
+                    </div>
+                    <div class="column">
+                            Film Format:<br>
+                            <input type="text" id="format" list="formats">
+                            <datalist id="formats">
+                            </datalist>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column" id="lenses">
+                            Lenses Used:
+                               <ul id="lenses_used" style="width:240px;height: 300px;" title="Double-click to remove a lens..."></ul>
+                    </div>
+                    <div class="column">
+                            Film Type:<br>
+                            <input type="text" id="type" list="types" size="6" title="What type of film was used...">
+                            <datalist id="types">
+                              <option value="B/W"></option>
+                              <option value="Color"></option>
+                              <option value="Slide"></option>
+                            </datalist>
+                            <br><br>
+                            Sheet#:<br>
+                            <input type="text" name="sheet" size="12" id = "sheet" title="The sheet number on the negative sleeve..."></input> <button name="gen" id="gen" type="button" class="btn" title="Click to generate new sheet#...">Gen</button>
+                                <br><br>
+                                Photographer:<br>
+                                <input type="text" id="photographer" list="photographers">
+                                <datalist id="photographers">
+                                 </datalist>
+                                 <br><br>
+                                 People:
+                                <textarea name="people" id="people" rows="3" cols="60" title="A comma-seperated list of people in the scans..."></textarea>
+                    </div>
+                    <div class="column">
+                            Date:<br>
+                            <input type="date" name="date" id="date" size="6">
+                            <br><br>
+                            Binder:<br>
+                          <input type="text" id="binder" list="binders" title="The name or number of the binder where this sheet is stored...">
+                          <datalist id="binders">
+                          </datalist> 
+                          <br><br>
+                          Title of Work:<br>
+                            <input type="text" name="title" size="20" id = "title" title="Give a title to this work.."></input>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                            Locations:
+                            <textarea name="locations" id="locations" rows="2" cols="92" title="A comma-seperated list of locations in the scans..."></textarea>
+                    </div>
+                    <div class="column">
+                            
+                    </div>
+                    <div class="column">
+                            
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                            Notes:
+                            <textarea name="memo" id="memo" rows="3" cols="92" title="Just some notes about this roll of film..."></textarea>
+                    </div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                </div>
+                <input hidden type="text" id="create_thumbs">
+                <div class="row" style="text-align: center;">
+                        <div class="column">
+                                <button type="button" name="loadInventory" id="loadInventory" class="btn" title="Manage inventory...">Inventory</button>
+                        </div>
+                        <div class="column">
+                                <button type="button" name="saveForm" id="saveForm" class="btn" title="Save the info.txt file to path selected above...">Save Data</button>
+                        </div>
+                        <div class="column">
+                                <button type="button" name="closeForm" id="closeForm" class="btn" title="Closes the application...">Close</button>
+                                
+                        </div>
+                    </div>
+
+                                <div id="status" class="status"></div>
+                                <progress id="progress" value="1" max="10" hidden></progress>
+                       
+                   
+                    
+             </form>
+             <script src="./index.js"></script>
+        </body>
+    </html>

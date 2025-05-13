@@ -1,0 +1,57 @@
+<!DOCTYPE html> 
+<html> 
+   <head> 
+      <meta charset = "UTF-8"> 
+      <title>Film Scan Data - About</title> 
+      <link rel="stylesheet" type="text/css" href="./style.css">
+   </head> 
+   
+    <body> 
+             <table>
+               <tr>
+                 <td>
+                    <div> 
+                      <img src="about_image.png" width="350" style="border: 1.5px solid #070707"></img>
+                    </div><br>
+                 </td>
+                 <td>
+                    I needed a tool to document my film scans so that I 
+                    could later come back and see what camera, lens, developer
+                    was used in the process. I came up with this tool which was
+                    originally writen in C# for Windows but after I migrated to
+                    Ubuntu I needed a tool that worked on Linux so I 
+                    re-wrote FilmScanData in Electron which is cross platform.
+                  <br><br>
+                    FilmScanData is free but if you find it useful consider
+                    donating a dollar or two which will help with future releases
+                    and development of other tools that are in the works.<br>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                      <input type="hidden" name="cmd" value="_donations" />
+                      <input type="hidden" name="business" value="BNKCUGZ7LN2VU" />
+                      <input type="hidden" name="currency_code" value="USD" />
+                      <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+                      <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+                      </form>
+
+                 </td>
+               </tr>
+               <tr>
+                 <td><div >
+                    FilmScanData<br>
+                    Version: 1.0.0<br>
+                    Coded by: Jason Ritchie<br>
+                    Coded in: Electron<br>
+                  </div>
+                 </td>
+                 <td style="text-align: right;vertical-align: text-bottom;">
+                    <button type="button" id="close">Close</button> 
+                 </td>
+               </tr>
+             </table>
+                  
+                    
+                     
+                
+                <script src="./about.js"></script>
+    </body>
+</html>
